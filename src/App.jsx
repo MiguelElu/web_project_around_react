@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import "../../blocks/page.css";
-import "../../blocks/header.css";
-import "../../blocks/content.css";
-import "../../blocks/footer.css";
-import "../../blocks/form.css";
-import "../../blocks/fullview.css";
-import "../../blocks/confirmation.css";
-import "../../vendor/fonts.css";
-import "../../vendor/normalize.css";
-import API from "../utils/api";
-import Header from "./header";
-import Body from "./Main/Main";
-import Footer from "./footer";
-import Popup from "./popup";
-import NewCard from "./form/card/card";
-import UserInfo from "./form/EditProfile/EditProfile";
-import ChangeAvatar from "./form/EditAvatar/EditAvatar";
+import "../blocks/page.css";
+import "../blocks/header.css";
+import "../blocks/content.css";
+import "../blocks/footer.css";
+import "../blocks/form.css";
+import "../blocks/fullview.css";
+import "../blocks/confirmation.css";
+import "../vendor/fonts.css";
+import "../vendor/normalize.css";
+import API from "./utils/api";
+import Header from "./components/header";
+import Body from "./components/body";
+import Footer from "./components/footer";
+import Popup from "./components/popup";
+import NewCard from "./components/form/card/card";
+import UserInfo from "./components/form/EditProfile/user_info";
+import ChangeAvatar from "./components/form/EditAvatar/avatar";
 
-import CurrentUserContext from "../contexts/CurrentUserContext";
+import CurrentUserContext from "./contexts/CurrentUserContext";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
