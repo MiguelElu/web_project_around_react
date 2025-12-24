@@ -1,4 +1,26 @@
+import { useState, useContext } from "react";
+import CurrentUserContext from "../../../contexts/CurrentUserContext";
+import Card from "../../Card";
+
 export default function NewCard() {
+  const userContext = useContext(CurrentUserContext); // Obtiene el objeto currentUser
+  const { handleAddPlaceSubmit } = userContext;
+  const [name, setName] = useState("");
+  const [url, setUrl] = useState("");
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+  const handleURLChange = (event) => {
+    setUrl(event.target.value);
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    handleAddPlaceSubmit({ name: name, url: url });
+  }
+
   return (
     <>
       <label className="form__field">
@@ -11,6 +33,8 @@ export default function NewCard() {
           placeholder="Title"
           required
           type="text"
+          value={name}
+          onChange={handleNameChange}
         />
         <span className="form__input-error" id="card-name-error"></span>
       </label>
@@ -22,11 +46,13 @@ export default function NewCard() {
           placeholder="Image link"
           required
           type="url"
+          value={url}
+          onChange={handleURLChange}
         />
         <span className="form__input-error" id="card-link-error"></span>
       </label>
 
-      <button className="form__button" type="submit">
+      <button className="form__button" type="submit" onClick={handleSubmit}>
         Guardar
       </button>
     </>

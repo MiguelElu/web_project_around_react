@@ -1,4 +1,17 @@
+import { useRef } from "react";
+import { useContext } from "react";
+import CurrentUserContext from "../../../contexts/CurrentUserContext";
+
 export default function ChangeAvatar() {
+  const avatarRef = useRef();
+  const userContext = useContext(CurrentUserContext); // Obtiene el objeto currentUser
+  const { onAvatarUpdate } = userContext;
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    onAvatarUpdate(avatarRef.current.value);
+  }
   return (
     <>
       <label className="form__field">
@@ -9,10 +22,11 @@ export default function ChangeAvatar() {
           placeholder="Title"
           required
           type="url"
+          ref={avatarRef}
         />
         <span className="form__input-error" id="avatar-url-error"></span>
       </label>
-      <button className="form__button" type="submit">
+      <button className="form__button" onClick={handleSubmit}>
         Guardar
       </button>
     </>
