@@ -5,7 +5,7 @@ import Card from "./components/Card/Card.jsx";
 import ImagePopup from "./components/popup/ImagePopup/ImagePopup.jsx";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-function Body(props) {
+function Main(props) {
   const { currentUser } = useContext(CurrentUserContext);
   const {
     popup,
@@ -79,4 +79,4 @@ function Body(props) {
   );
 }
 
-export default Body;
+export default Main;

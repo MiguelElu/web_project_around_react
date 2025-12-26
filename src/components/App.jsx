@@ -10,7 +10,7 @@ import "../../vendor/fonts.css";
 import "../../vendor/normalize.css";
 import API from "../utils/api";
 import Header from "./Header/header";
-import Body from "./Main/Main";
+import Main from "./Main/Main";
 import Footer from "./Footer/footer";
 import NewCard from "./Main/components/popup/NewCard/NewCard";
 import UserInfo from "./Main/components/popup/EditProfile/EditProfile";
@@ -110,7 +110,7 @@ function App() {
     >
       <div className="page">
         <Header></Header>
-        <Body
+        <Main
           popup={popup}
           cards={cards}
           newCardPopup={newCardPopup}
@@ -120,7 +120,7 @@ function App() {
           handleClosePopup={handleClosePopup}
           handleCardLike={handleCardLike}
           handleCardDelete={handleCardDelete}
-        ></Body>
+        />
         <Footer></Footer>
       </div>
     </CurrentUserContext.Provider>
