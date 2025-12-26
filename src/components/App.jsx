@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import "../blocks/page.css";
-import "../blocks/header.css";
-import "../blocks/content.css";
-import "../blocks/footer.css";
-import "../blocks/form.css";
-import "../blocks/fullview.css";
-import "../blocks/confirmation.css";
-import "../vendor/fonts.css";
-import "../vendor/normalize.css";
-import API from "../src/utils/api";
+import "../../blocks/page.css";
+import "../../blocks/header.css";
+import "../../blocks/content.css";
+import "../../blocks/footer.css";
+import "../../blocks/form.css";
+import "../../blocks/fullview.css";
+import "../../blocks/confirmation.css";
+import "../../vendor/fonts.css";
+import "../../vendor/normalize.css";
+import API from "../utils/api";
 import Header from "./Header/header";
 import Body from "./Main/Main";
 import Footer from "./Footer/footer";
 import NewCard from "./Main/components/popup/NewCard/NewCard";
 import UserInfo from "./Main/components/popup/EditProfile/EditProfile";
 import ChangeAvatar from "./Main/components/popup/EditAvatar/EditAvatar";
-import CurrentUserContext from "../src/contexts/CurrentUserContext";
+import CurrentUserContext from "../contexts/CurrentUserContext";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
