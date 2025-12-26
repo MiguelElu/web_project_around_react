@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import CurrentUserContext from "../../../contexts/CurrentUserContext";
-import Card from "../../Card";
+import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
+import Card from "../../Card/Card";
 
 export default function NewCard() {
   const userContext = useContext(CurrentUserContext); // Obtiene el objeto currentUser

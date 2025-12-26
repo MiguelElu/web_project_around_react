@@ -9,13 +9,13 @@ import "../../blocks/confirmation.css";
 import "../../vendor/fonts.css";
 import "../../vendor/normalize.css";
 import API from "../utils/api";
-import Header from "./header";
+import Header from "./Header/header";
 import Body from "./Main/Main";
-import Footer from "./footer";
-import Popup from "./popup";
-import NewCard from "./form/card/card";
-import UserInfo from "./form/EditProfile/EditProfile";
-import ChangeAvatar from "./form/EditAvatar/EditAvatar";
+import Footer from "./Footer/footer";
+import Popup from "./Main/components/popup/popup";
+import NewCard from "./Main/components/popup/NewCard/NewCard";
+import UserInfo from "./Main/components/popup/EditProfile/EditProfile";
+import ChangeAvatar from "./Main/components/popup/EditAvatar/EditAvatar";
 
 import CurrentUserContext from "../contexts/CurrentUserContext";
 

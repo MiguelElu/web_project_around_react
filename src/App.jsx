@@ -9,14 +9,12 @@ import "../blocks/confirmation.css";
 import "../vendor/fonts.css";
 import "../vendor/normalize.css";
 import API from "./utils/api";
-import Header from "./components/header";
-import Body from "./components/body";
-import Footer from "./components/footer";
-import Popup from "./components/popup";
-import NewCard from "./components/form/card/card";
-import UserInfo from "./components/form/EditProfile/user_info";
-import ChangeAvatar from "./components/form/EditAvatar/avatar";
-
+import Header from "./components/Header/header";
+import Body from "./components/Main/Main";
+import Footer from "./components/Footer/footer";
+import NewCard from "./components/popup/NewCard/NewCard";
+import UserInfo from "./components/popup/EditProfile/EditProfile";
+import ChangeAvatar from "./components/popup/EditAvatar/EditAvatar";
 import CurrentUserContext from "./contexts/CurrentUserContext";
 
 function App() {
