@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
 
-export default function ChangeAvatar() {
+export default function EditAvatar() {
   const avatarRef = useRef();
   const userContext = useContext(CurrentUserContext); // Obtiene el objeto currentUser
   const { onAvatarUpdate } = userContext;

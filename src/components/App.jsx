@@ -13,8 +13,8 @@ import Header from "./Header/header";
 import Main from "./Main/Main";
 import Footer from "./Footer/footer";
 import NewCard from "./Main/components/popup/NewCard/NewCard";
-import UserInfo from "./Main/components/popup/EditProfile/EditProfile";
-import ChangeAvatar from "./Main/components/popup/EditAvatar/EditAvatar";
+import EditProfile from "./Main/components/popup/EditProfile/EditProfile";
+import EditAvatar from "./Main/components/popup/EditAvatar/EditAvatar";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 
 function App() {
@@ -29,10 +29,10 @@ function App() {
   const [popup, setPopup] = useState(null);
   const [cards, setCards] = useState([]);
   const newCardPopup = { title: "Nuevo lugar", children: <NewCard /> };
-  const editInfoPopup = { title: "Editar Informacion", children: <UserInfo /> };
+  const editInfoPopup = { title: "Editar Informacion", children: <EditProfile /> };
   const changeAvatarPopup = {
     title: "Cambair Perfil",
-    children: <ChangeAvatar />,
+    children: <EditAvatar />,
   };
 
   function handleOpenPopup(popup) {
@@ -120,7 +120,7 @@ function App() {
           handleClosePopup={handleClosePopup}
           handleCardLike={handleCardLike}
           handleCardDelete={handleCardDelete}
-        />
+        ></Main>
         <Footer></Footer>
       </div>
     </CurrentUserContext.Provider>
