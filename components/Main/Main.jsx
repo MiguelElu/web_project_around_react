@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import Popup from "./components/popup/popup";
 import Card from "./components/Card/Card.jsx";
-import ImagePopup from "./components/popup/ImagePopup.jsx";
+import ImagePopup from "./components/popup/ImagePopup/ImagePopup.jsx";
 import CurrentUserContext from "../../src/contexts/CurrentUserContext";
 
 function Body(props) {

@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import Popup from "./popup";
 import Card from "./Card/Card";
-import ImagePopup from "./Main/components/popup/ImagePopup";
+import ImagePopup from "./Main/components/popup/ImagePopup/ImagePopup";
 import API from "../src/utils/api";
 import CurrentUserContext from "../src/contexts/CurrentUserContext";
 
