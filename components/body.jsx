@@ -3,8 +3,8 @@ import { useContext } from "react";
 import Popup from "./popup";
 import Card from "./Card/Card";
 import ImagePopup from "./Main/components/popup/ImagePopup";
-import API from "../utils/api";
-import CurrentUserContext from "../contexts/CurrentUserContext";
+import API from "../src/utils/api";
+import CurrentUserContext from "../src/contexts/CurrentUserContext";
 
 function Body(props) {
   const { currentUser } = useContext(CurrentUserContext);

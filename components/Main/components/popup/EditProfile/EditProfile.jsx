@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import CurrentUserContext from "../../../../../contexts/CurrentUserContext";
+import CurrentUserContext from "../../../../../src/contexts/CurrentUserContext";
 
 export default function UserInfo() {
   const userContext = useContext(CurrentUserContext); // Obtiene el objeto currentUser
